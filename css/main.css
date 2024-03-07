@@ -75,7 +75,7 @@
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -235,7 +235,9 @@ body {
   font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  background-image: url('../img/6593.jpg'); /* Replace 'background.jpg' with the path to your image */
+  /* overflow: ; */
+  height: 100%;
+  background-image: url('../img/6593.jpg');
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -287,23 +289,23 @@ h6 {
    #SPACING
    ========================================================================== */
 .p-t-100 {
-  padding-top: 100px;
+  padding-top: 90px;
 }
 
 .p-t-130 {
-  padding-top: 130px;
+  padding-top: 120px;
 }
 
 .p-t-180 {
-  padding-top: 180px;
+  padding-top: 150px;
 }
 
 .p-t-45 {
-  padding-top: 45px;
+  padding-top: 20px;
 }
 
 .p-t-20 {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .p-t-15 {
@@ -323,7 +325,7 @@ h6 {
 }
 
 .p-b-50 {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .m-r-45 {
@@ -331,11 +333,11 @@ h6 {
 }
 
 .m-r-55 {
-  margin-right: 55px;
+  margin-right: 50px;
 }
 
 .m-b-55 {
-  margin-bottom: 55px;
+  margin-bottom: 45px;
 }
 
 /* ==========================================================================
@@ -346,19 +348,19 @@ h6 {
 }
 
 .wrapper--w960 {
-  max-width: 960px;
+  max-width: 980px;
 }
 
 .wrapper--w790 {
-  max-width: 790px;
+  max-width: 850px;
 }
 
 .wrapper--w780 {
-  max-width: 780px;
+  max-width: 800px;
 }
 
 .wrapper--w680 {
-  max-width: 680px;
+  max-width: 700px;
 }
 
 /* ==========================================================================
@@ -448,7 +450,7 @@ input {
 
 .input--style-5 {
   background: #e5e5e5;
-  line-height: 50px;
+  line-height: 45px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -465,6 +467,12 @@ input {
   .input-group-desc {
     margin-bottom: 40px;
   }
+}
+
+@media (max-width: 767px) {
+    .form-row {
+        margin-bottom: 25px; /* Margin for mobile screens */
+    }
 }
 
 .input-group {
@@ -498,6 +506,7 @@ input {
    ========================================================================== */
 .select--no-search .select2-search {
   display: none !important;
+
 }
 
 .select2-container--open .select2-dropdown--below {
@@ -515,6 +524,8 @@ input {
 
 .select2-container--default .select2-results__option {
   padding-left: 22px;
+  background-color: #ffffff; /* Background color for options */
+  color: #333333; /* Text color for options */
 }
 
 .rs-select2 .select2-container {
@@ -603,8 +614,10 @@ input {
 .card {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px;
+  border-radius: 4px;
   background: #fff;
+  /* padding-top: 2px; */
+
 }
 
 .card-5 {
@@ -618,24 +631,24 @@ input {
 }
 
 .card-5 .card-heading {
-  padding: 20px 0;
+  padding: 10px 0;
   background: #1a1a1a;
   -webkit-border-top-left-radius: 10px;
   -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
+  border-top-left-radius: 15px;
   -webkit-border-top-right-radius: 10px;
   -moz-border-radius-topright: 10px;
-  border-top-right-radius: 10px;
+  border-top-right-radius: 15px;
 }
 
 .card-5 .card-body {
-  padding: 52px 85px;
-  padding-bottom: 73px;
+  padding: 30px 50px;
+  padding-bottom: 30px;
 }
 
 @media (max-width: 767px) {
   .card-5 .card-body {
     padding: 40px 30px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
 }
