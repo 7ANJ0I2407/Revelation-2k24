@@ -76,6 +76,7 @@
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .form-row .name {
@@ -234,6 +235,11 @@ body {
   font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 14px;
+  background-image: url('../img/6593.jpg'); /* Replace 'background.jpg' with the path to your image */
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: .95;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -436,6 +442,8 @@ input {
   width: 100%;
   font-size: 14px;
   font-family: inherit;
+  /* opacity: .3; */
+
 }
 
 .input--style-5 {
