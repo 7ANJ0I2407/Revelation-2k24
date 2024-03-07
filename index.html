@@ -25,21 +25,21 @@
                     <h2 class="title">Event Registration</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" action="/submit">
                         <div class="form-row m-b-55">
                             <div class="name">Name</div>
                             <div class="value">
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="first_name" required>
-                                            <label class="label--desc">First Name</label>
+                                            <input class="input--style-5" type="text" placeholder="First Name" name="first_name" required>
+                                            <!-- <label class="label--desc">First Name</label> -->
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="last_name" required>
-                                            <label class="label--desc">Last Name</label>
+                                            <input class="input--style-5" type="text" placeholder="Last Name" name="last_name" required>
+                                            <!-- <label class="label--desc">Last Name</label> -->
                                         </div>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@
                             <div class="name">College Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="collge name">
+                                    <input class="input--style-5" type="text" name="collge_name">
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject" required>
+                                        <select name="academic_year" required>
                                             <option disabled="disabled" selected="selected">Choose option</option>
                                             <option>First Year</option>
                                             <option>Second Year</option>
@@ -87,10 +87,10 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="name">Department</div>
+                            <div class="name">Department<br> Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="depatment" required>
+                                    <input class="input--style-5" type="text" name="department_name" required>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                             <div class="name">Enrollment <br> Number</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="enrollment" required>
+                                    <input class="input--style-5" type="text" name="enrollment_no" required>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                             <div class="name">Contact <br>Number</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="phone" required>
+                                    <input class="input--style-5" type="text" name="phone_no" required>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no--search">
-                                        <select name="subject" multiple required>
+                                        <select name="selected_events" multiple required>
                                             <option>Event 1</option>
                                             <option>Event 2</option>
                                             <option>Event 3</option>
