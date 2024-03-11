@@ -94,7 +94,7 @@
 
 @media (max-width: 767px) {
   .form-row {
-    display: block;
+    display: flex;
   }
   .form-row .name,
   .form-row .value {
@@ -228,7 +228,7 @@ button {
    #PAGE WRAPPER
    ========================================================================== */
 .page-wrapper {
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 body {
@@ -237,6 +237,10 @@ body {
   font-size: 14px;
   /* overflow: ; */
   height: 100%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
   background-image: url('../img/6593.jpg');
   background-size: cover;
   background-repeat: repeat;
@@ -645,6 +649,7 @@ input {
 .card-5 .card-body {
   padding: 30px 50px;
   padding-bottom: 30px;
+  display: flex;
 }
 
 @media (max-width: 767px) {

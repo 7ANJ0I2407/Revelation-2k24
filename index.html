@@ -5,6 +5,7 @@
 
 
   <style>
+
     .checkbox-container-wrapper {
     display: flex;
     justify-content: center;
@@ -19,7 +20,7 @@ margin-left: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 @media (max-width: 550px) {
@@ -27,6 +28,22 @@ margin-left: 140px;
   margin-right: 70px;
   margin-left: 70px;
   }
+}
+
+@media (min-width: 980px)
+{
+  html, body {
+    height: 100%;
+    margin: 0;
+}
+.card-body {
+  display: flex;
+}
+
+  .container {
+        justify-content: center;
+        align-items: center;
+    }
 }
     </style>
     <meta charset="UTF-8">
@@ -238,6 +255,11 @@ margin-left: 140px;
     <script src="js/global.js"></script>
 
     <script>
+        // window.onload = function() {
+        //     if (window.innerHeight > document.body.scrollHeight) {
+        //         document.body.style.overflow = 'hidden';
+        //     }
+        // };
         $(document).ready(function () {
             // first hide for outsiders
             $('.college-name, .outside').hide();
@@ -259,8 +281,6 @@ margin-left: 140px;
             });
         });
     </script>
-
-
 
 </body>
 </html>
