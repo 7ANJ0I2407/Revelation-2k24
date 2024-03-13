@@ -3,9 +3,12 @@
 
 <head>
 
-
   <style>
 
+    html {
+        background: rgb(205,0,0);
+        background: linear-gradient(0deg, rgba(205,0,0,1) 20%, rgba(1,1,1,1) 85%);
+    }
     .checkbox-container-wrapper {
     display: flex;
     justify-content: center;
@@ -35,6 +38,7 @@ margin-left: 140px;
   html, body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 .card-body {
   display: flex;
@@ -45,6 +49,10 @@ margin-left: 140px;
         align-items: center;
     }
 }
+#submitButton:disabled {
+        cursor: not-allowed; /* Change cursor to "not-allowed" when button is disabled */
+    }
+    
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -62,6 +70,7 @@ margin-left: 140px;
 </head>
 
 <body>
+    <div></div>
   <div class="container">
     <div class="page-wrapper p-t-45 p-b-50">
         <div class="wrapper wrapper--w790">
@@ -70,7 +79,7 @@ margin-left: 140px;
                     <h2 class="title">Event Registration</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="">
+                    <form method="POST" action="" id="form">
                         <div class="form-row">
                             <div class="name">Name</div>
                             <div class="value">
@@ -95,7 +104,7 @@ margin-left: 140px;
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="email" required>
+                                    <input class="input--style-5" type="email" name="email" placeholder="Enter Your Email Address" required>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +113,7 @@ margin-left: 140px;
                             <div class="name">Contact <br>Number</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="phone_no" required>
+                                    <input class="input--style-5" type="number" name="phone_no" placeholder="Enter Your Phone Number" required>
                                 </div>
                             </div>
                         </div>
@@ -116,14 +125,14 @@ margin-left: 140px;
                                     <div class="checkbox-container">
                                         <div class="checkbox-text">Yes</div>
                                         <div class="checkbox-button">
-                                            <input type="radio" name="iiestian" value="yes" checked>
+                                            <input type="radio" name="iiestian" value="Yes" checked>
                                             <span class="checkmark"></span>
                                         </div>
                                     </div>
                                     <div class="checkbox-container">
                                         <div class="checkbox-text">No</div>
                                         <div class="checkbox-button">
-                                            <input type="radio" name="iiestian" value="no">
+                                            <input type="radio" name="iiestian" value="No">
                                             <span class="checkmark"></span>
                                         </div>
                                     </div>
@@ -138,8 +147,8 @@ margin-left: 140px;
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="academic_year">
-                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                        <select name="academic_year" >
+                                            <option value="No_option_Selected" selected>Choose option</option>
                                             <option>UG First Year</option>
                                             <option>UG Second Year</option>
                                             <option>UG Third Year</option>
@@ -164,8 +173,8 @@ margin-left: 140px;
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select-search">
-                                        <select name="department">
-                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                        <select name="department_name">
+                                            <option value="No_option_Selected" selected>Choose option</option>
                                             <option>Aerospace Engineering and Applied Mechanics</option>
                                             <option>Architecture and Planning</option>
                                             <option>Chemistry</option>
@@ -192,7 +201,7 @@ margin-left: 140px;
                             <div class="name">College Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="collge_name">
+                                    <input class="input--style-5" type="text" name="college_name" placeholder="Enter Your College Name" value="IIEST">
                                 </div>
                             </div>
                         </div>
@@ -201,7 +210,7 @@ margin-left: 140px;
                             <div class="name">Department Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="department_outside">
+                                    <input class="input--style-5" type="text" name="department_outside" placeholder="Enter Your Department Name" value="NULL">
                                 </div>
                             </div>
                         </div>
@@ -213,7 +222,7 @@ margin-left: 140px;
                             <div class="name">Enrollment <br> Number</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="enrollment_no" required>
+                                    <input class="input--style-5" type="text" name="enrollment_no" placeholder="Enter Your Enrollment Number" value="NULL" required>
                                 </div>
                             </div>
                         </div>
@@ -237,9 +246,9 @@ margin-left: 140px;
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                            <button name="btn" id="submitButton" class="btn btn--radius-2 btn--red" type="submit">Register</button>
                         </div>
                     </form>
                 </div>
@@ -255,11 +264,6 @@ margin-left: 140px;
     <script src="js/global.js"></script>
 
     <script>
-        // window.onload = function() {
-        //     if (window.innerHeight > document.body.scrollHeight) {
-        //         document.body.style.overflow = 'hidden';
-        //     }
-        // };
         $(document).ready(function () {
             // first hide for outsiders
             $('.college-name, .outside').hide();
@@ -267,7 +271,7 @@ margin-left: 140px;
 
             // Show/hide fields on checkbox selection
             $('input[name="iiestian"]').change(function () {
-                if ($(this).val() === 'yes') {
+                if ($(this).val() === 'Yes') {
                   $('.enrollment-no, .department-name').show();
                   $('.college-name, .outside').hide();
 
@@ -282,5 +286,56 @@ margin-left: 140px;
         });
     </script>
 
+    <!-- Script to send the form data -->
+    <script>
+    let url = 'https://script.google.com/macros/s/AKfycbylI_fyt9DpZl108_I4LQC2ShzVH-RgOcM4j3-uvHTkHKAtC3rp8W8mil2zM4CXVtwa/exec';
+    let form = document.querySelector('#form');
+    let submitted = false;
+    form.addEventListener("submit", (e) => {
+        e.target.btn.innerHTML = "Registering";
+       if(!submitted) { let d = new FormData(form);
+        fetch(url,{
+            method: 'POST',
+            body: d
+        }).then((res) => res.text()).then((finalRes) => {
+        e.target.btn.innerHTML = "Registered";
+            console.log(finalRes)
+        })
+        submitted = true;
+        disableSubmit()
+    }
+        e.preventDefault();
+
+    })
+    // function to disable the submit button
+    function disableSubmit() {
+    if(submitted) {
+        var button = document.getElementById("submitButton");
+        button.disabled = true;
+        button.classList.add("disabled");
+    }
+}
+</script>
+
+<!-- function to clear the default values -->
+<script>
+    $(document).ready(function () {
+        $('input[name="department_outside"]').focus(function() {
+            if ($(this).val() === 'NULL') {
+                $(this).val('');
+            }
+        });
+        $('input[name="enrollment_no"]').focus(function() {
+            if ($(this).val() === 'NULL') {
+                $(this).val('');
+            }
+        });
+        $('input[name="college_name"]').focus(function() {
+            if ($(this).val() === 'IIEST') {
+                $(this).val('');
+            }
+        });
+    });
+</script>
 </body>
 </html>
