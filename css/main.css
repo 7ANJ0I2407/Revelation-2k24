@@ -75,7 +75,7 @@
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -305,7 +305,7 @@ h6 {
 }
 
 .p-t-45 {
-  padding-top: 20px;
+  padding-top: 55px;
 }
 
 .p-t-20 {
@@ -375,8 +375,8 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 50px;
-  padding: 0 50px;
+  line-height: 45px;
+  padding: 0 40px;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -647,14 +647,14 @@ input {
 }
 
 .card-5 .card-body {
-  padding: 30px 50px;
+  padding: 23px 40px;
   padding-bottom: 30px;
   display: flex;
 }
 
 @media (max-width: 767px) {
   .card-5 .card-body {
-    padding: 40px 30px;
-    padding-bottom: 40px;
+    padding: 23px 30px;
+    padding-bottom: 30px;
   }
 }
