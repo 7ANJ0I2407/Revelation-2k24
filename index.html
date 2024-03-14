@@ -38,7 +38,7 @@ margin-left: 140px;
   html, body {
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .card-body {
   display: flex;
@@ -52,7 +52,7 @@ margin-left: 140px;
 #submitButton:disabled {
         cursor: not-allowed; /* Change cursor to "not-allowed" when button is disabled */
     }
-    
+
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -246,7 +246,7 @@ margin-left: 140px;
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div>
                             <button name="btn" id="submitButton" class="btn btn--radius-2 btn--red" type="submit">Register</button>
                         </div>
@@ -288,7 +288,7 @@ margin-left: 140px;
 
     <!-- Script to send the form data -->
     <script>
-    let url = 'https://script.google.com/macros/s/AKfycbylI_fyt9DpZl108_I4LQC2ShzVH-RgOcM4j3-uvHTkHKAtC3rp8W8mil2zM4CXVtwa/exec';
+    let url = 'https://script.google.com/macros/s/AKfycbwfvAoXyI3S357s3SMdAQcJa2yH_ScZGdmFjuu2c59rtqOj3blm4hUcqs7XPGZU7CI/exec';
     let form = document.querySelector('#form');
     let submitted = false;
     form.addEventListener("submit", (e) => {
