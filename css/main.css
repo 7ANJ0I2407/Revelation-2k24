@@ -17,6 +17,128 @@
 /* ==========================================================================
    #GRID
    ========================================================================== */
+
+
+   /* ============================================================================
+
+   #Navbar vro
+   ============================================================================ */
+
+   .navbar {
+       background: rgb(25,6,9);
+       background: linear-gradient(90deg, rgba(25,6,9,1) 0%, rgba(214,12,43,1) 50%, rgba(0,0,0,1) 100%);
+       overflow: hidden;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       width: 80%;
+       height: 70px;
+       border-radius: 15px;
+       /* margin-bottom: 8px; */
+       margin-top: 13px;
+       position: fixed;
+       z-index: 1;
+       padding-top: .7rem;
+       padding-bottom: .6rem;
+       padding-right: 10px;;
+   }
+
+   .navbar a {
+       float: left;
+       display: block;
+       color: #f2f2f2;
+       text-align: center;
+       padding: 10px 12px;
+       text-decoration: none;
+       border-radius: 10px;
+   }
+
+   .navbar a:hover {
+       color: rgb(202, 14, 14);
+   }
+
+   .bb {
+    align-items: center;
+    justify-content: center;
+   }
+
+   
+
+   /* ============================================================================ */
+      /* #media's bro */
+   /* ============================================================================ */
+    
+   @media (max-width : 514px) {
+    .disco {
+        display: none;
+    }
+    .navbar {
+        height: 60px;
+    }
+    .logo {
+        height: 48px;
+        width: 133px;
+        padding-left: 3px;
+        padding-right: 15px;
+    }
+    .navbar a {
+        padding: 8px 7px;
+    }
+}
+@media (min-width: 500px) and (max-width: 787px) {
+    .logo {
+        height: 50px;
+        width: 150px;
+    }
+}
+@media (min-width: 515px) {
+    .b {
+        display: none;
+    }
+}
+@media (min-width: 1442px) {
+    .navbar {
+    margin-top: 45px;
+    height: 85px;
+    }
+    .container {
+    margin-top: 60px;
+    }
+}
+
+@media (max-width: 775px) {
+  .checkbox-container {
+  margin-right: 70px;
+  margin-left: 70px;
+  }
+}
+
+@media (min-width: 980px)
+{
+  html, body {
+    height: 100%;
+    margin: 0;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.card-body {
+  display: flex;
+}
+  .container {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+   /* ============================================================================ */
+   /* ============================================================================ */
+
+
+
+   /* ============================================================================ */
+   /* ============================================================================ */
+
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -229,22 +351,24 @@ button {
    ========================================================================== */
 .page-wrapper {
   /* height: 100vh; */
+  display: flex;
 }
 
 body {
   font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 14px;
+  flex-wrap: wrap;
   /* overflow: ; */
   height: 100%;
   display: flex;
   height: 100%;
   justify-content: center;
-  align-content: center;
+  /* align-content: center; */
   /* background-image: url('../img/6593.jpg'); */
   background-size: cover;
   background-repeat: repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   opacity: 1;
 }
 
@@ -465,7 +589,7 @@ input {
 }
 
 .input-group-desc {
-  position: relative;
+  position: static;
 }
 
 @media (max-width: 767px) {
@@ -481,7 +605,7 @@ input {
 }
 
 .input-group {
-  position: relative;
+  position: static;
   margin: 0;
 }
 
@@ -547,6 +671,7 @@ input {
   border: none;
   height: 50px;
   background: transparent;
+  /* position: static; */
 }
 
 .rs-select2 .select2-container .select2-selection--single .select2-selection__rendered {
@@ -633,6 +758,7 @@ input {
   -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 95px;
 }
 
 .card-5 .card-heading {
@@ -648,7 +774,7 @@ input {
 
 .card-5 .card-body {
   padding: 23px 40px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   display: flex;
 }
 
