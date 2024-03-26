@@ -120,7 +120,8 @@
     height: 100%;
     margin: 0;
     flex-wrap: wrap;
-    overflow:scroll
+    overflow:scroll;
+    overflow-x: hidden;
 }
 .card-body {
   display: flex;
