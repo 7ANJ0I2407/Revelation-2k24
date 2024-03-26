@@ -294,14 +294,14 @@ margin-left: 140px;
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no--search">
                                         <select name="selected_events" multiple required>
-                                            <option>Brain Dead</option>
-                                            <option>Build With Us</option>
+                                            <!-- <option>Brain Dead</option> -->
+                                            <!-- <option>Build With Us</option> -->
                                             <option>Chess</option>
-                                            <option>Code Storm</option>
+                                            <!-- <option>Code Storm</option> -->
                                             <option>Fifa</option>
-                                            <option>Feature Title</option>
+                                            <!-- <option>Feature Title</option> -->
                                             <option>Ganitam</option>
-                                            <option>Root Access</option>
+                                            <!-- <option>Root Access</option> -->
                                             <option>Murder Mystery</option>
                                             <option>PUBG</option>
                                             <option>Valorant</option>
@@ -355,7 +355,7 @@ margin-left: 140px;
 
     <!-- Script to send the form data -->
     <script>
-    let url = 'https://script.google.com/macros/s/AKfycbwtS-dKkGeR6ihR1Ct_00LyC8WpKQXj84TsDtzWLtY8zqo6q0T7av-qqG0dpbQuQXUI6Q/exec';
+    let url = 'https://script.google.com/macros/s/AKfycbyHnLkMhbklrm3b7udFxzxUuc6WplIysUiqxk68hNOTrYM8VhCa7eTMq3aeoykYBs5peQ/exec';
     let form = document.querySelector('#form');
     let submitted = false;
     form.addEventListener("submit", (e) => {
@@ -366,6 +366,7 @@ margin-left: 140px;
             body: d
         }).then((res) => res.text()).then((finalRes) => {
         e.target.btn.innerHTML = "Registered";
+        alert("Your Registration is Successful!!")
             console.log(finalRes)
         })
         submitted = true;
