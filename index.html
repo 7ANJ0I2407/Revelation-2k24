@@ -7,7 +7,11 @@
 
     html {
         background: rgb(205,0,0);
-        background: linear-gradient(0deg, rgba(205,0,0,1) 20%, rgba(1,1,1,1) 85%);
+        background: linear-gradient(180deg, rgba(205,0,0,1) 20%, rgba(1,1,1,1) 67%);
+    }
+    body {
+      flex-wrap: wrap;
+
     }
     .checkbox-container-wrapper {
     display: flex;
@@ -20,7 +24,7 @@ margin-left: 140px;
 }
 
 .container {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -38,8 +42,12 @@ margin-left: 140px;
   html, body {
     height: 100%;
     margin: 0;
-    /* overflow: hidden; */
+    flex-wrap: wrap;
+    overflow: hidden;
 }
+
+
+
 .card-body {
   display: flex;
 }
@@ -67,13 +75,77 @@ margin-left: 140px;
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="css/main.css" rel="stylesheet" media="all">
 
+    <style>
+        .logo {
+          height: 8vh;
+          width: 15vw;
+          padding-left: 15px;
+          padding-right: 10px;
+          border-radius: 9px;
+          color: transparent;
+        }
+        .bb:hover {
+            background-color: rgb(255, 255, 255);
+        }
+        @media (max-width : 514px) {
+            .disco {
+                display: none;
+            }
+            .navbar {
+                height: 60px;
+            }
+            .logo {
+                height: 48px;
+                width: 133px;
+                padding-left: 3px;
+                padding-right: 15px;
+            }
+            .navbar a {
+                padding: 8px 7px;
+            }
+        }
+        @media (min-width: 500px) and (max-width: 787px) {
+            .logo {
+                height: 50px;
+                width: 150px;
+            }
+        }
+        @media (min-width: 515px) {
+            .b {
+                display: none;
+            }
+        }
+        @media (min-width: 1442px) {
+            .navbar {
+            margin-top: 45px;
+            height: 85px;
+            }
+            .container {
+            margin-top: 60px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-    <div></div>
+  <div class="navbar">
+        <a href="#"> <img src="img/rev.png" alt="Revelation_logo" class="logo"> </a>
+        <div class="disco">
+            <a href="#" class="bb"><b>Home</b></a>
+            <a href="#" class="bb"><b>Events</b></a>
+            <a href="#" class="bb"> <b>Contact</b></a>
+        </div>
+        <div class="b">
+            <a href="#" class="bb"><b>Home</b></a>
+            <a href="#" class="bb"><b>Events</b></a>
+
+        </div>
+        
+ </div>
+
   <div class="container">
-    <div class="page-wrapper p-t-45 p-b-50">
-        <div class="wrapper wrapper--w790">
+
             <div class="card card-5">
                 <div class="card-heading">
                     <h2 class="title">Event Registration</h2>
@@ -118,6 +190,7 @@ margin-left: 140px;
                             </div>
                         </div>
 
+
                           <div class="form-row m-b-55">
                             <div class="name">IIESTIAN ?</div>
                             <div class="value">
@@ -139,7 +212,6 @@ margin-left: 140px;
                                 </div>
                             </div>
                         </div>
-
 
 
                         <div class="form-row">
@@ -164,9 +236,6 @@ margin-left: 140px;
                                 </div>
                             </div>
                         </div>
-
-
-
 
                         <div class="form-row department-name" id = "dept-inside">
                             <div class="name">Department Name</div>
@@ -201,7 +270,7 @@ margin-left: 140px;
                             <div class="name">College Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="college_name" placeholder="Enter Your College Name" value="IIEST">
+                                    <input class="input--style-5" type="text" name="college_name" placeholder="Enter Your College Name" value="NULL">
                                 </div>
                             </div>
                         </div>
@@ -246,8 +315,6 @@ margin-left: 140px;
                                             <option>PUBG</option>
                                             <option>Valorant</option>
                                             <option>Techno Quiz</option>
-
-
 
                                         </select>
                                         <div class="select-dropdown"></div>
@@ -340,7 +407,7 @@ margin-left: 140px;
             }
         });
         $('input[name="college_name"]').focus(function() {
-            if ($(this).val() === 'IIEST') {
+            if ($(this).val() === 'NULL') {
                 $(this).val('');
             }
         });
